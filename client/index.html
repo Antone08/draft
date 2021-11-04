@@ -7,15 +7,19 @@
     <title>Player Connect</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+<audio controls>
+    <source src="Night Flower.mp3" type="audio/mpeg">
+</audio>
 <body>
+     
     <h1>Player Connect</h1>
     <form id="create-form">
         <div class="listItem">
             <input class="info" id="name" placeholder="Gamer Name" />  
             <input class="info" id="console" placeholder="Favorite Console" />
             <input class="info" id="game" placeholder="Favorite Game Title" />
-            <label for="reason">Reason for gaming</label>
-            <select id="reason">
+            <label class="drop-down" for="reasoning">Reason for gaming</label>
+            <select class="drop-down" id="reason">
                 <option value="">--Please choose an option--</option>
                 <option value="casual-gaming">Casual Gaming</option>
                 <option value="trophy-hunter">To Farm Achievements</option>

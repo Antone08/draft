@@ -23,14 +23,16 @@ const createPlayer = body => axios.post(baseURL, body).then(playersCallback).cat
 function submitHandler(evt) {
  evt.preventDefault();
 
- let name = document.querySelector('#name')
- let console = document.querySelector('#console')
- let game = document.querySelector('#game')
+//  clearPlayer()
+
+ let name = document.querySelector('#name').value
+ let console = document.querySelector('#console').value
+ let game = document.querySelector('#game').value
 
  let bodyObj = {
-     name: name.value,
-     console: console.value,
-     game: game.value
+     name,
+     console,
+     game
  };
 
  createPlayer(bodyObj);
@@ -42,6 +44,7 @@ function submitHandler(evt) {
 
 
 function createPlayerCard(data) {
+    // data.preventDefault()
     const playerCard = document.createElement('div');
     playerCard.classList.add('player-card');
     playerCard.innerHTML = `<p><b>Player Information:</b></p>
@@ -53,6 +56,23 @@ function createPlayerCard(data) {
     playerContainer.appendChild(playerCard);
 };
 
+function clearPlayer() {
+    playerContainer.innerHTML = ``
+  };
+
+
+// function getPlayer() {
+//     clearPlayer()
+
+//     axios.get(`${baseURL}/players`)
+//     .then(function(res) {
+//       for (let i = 0; i < res.data.length; i++) {
+//         createPlayerCard(res.data[i])
+//       }
+//     })
+//     .catch(err => console.log(err))
+// };
+
 function displayPlayers(arr) {
     playerContainer.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
@@ -60,7 +80,12 @@ function displayPlayers(arr) {
     }
 };
 
-createForm.addEventListener('submit', submitHandler);
+document.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.04;
+  });
+
+submitBtn.addEventListener('click', submitHandler);
 
 
-getAllPlayers()
+// getAllPlayers()

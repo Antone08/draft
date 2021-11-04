@@ -28,25 +28,12 @@ function submitHandler(evt) {
  let game = document.querySelector('#game').value
  let reason = document.querySelector('#reason').value
 
-<<<<<<< HEAD
 console.log(reason)
  let bodyObj = {
      gName,
      system,
      game, 
      reason
-=======
-//  clearPlayer()
-
- let name = document.querySelector('#name').value
- let console = document.querySelector('#console').value
- let game = document.querySelector('#game').value
-
- let bodyObj = {
-     name,
-     console,
-     game
->>>>>>> ff6ec932b51e67adea1496f4f7a9205b30d6311f
  };
  console.log(bodyObj)
  createPlayerCard(bodyObj);
@@ -57,7 +44,6 @@ system.value = ''
 game.value = ''
 };
 function createPlayerCard(data) {
-<<<<<<< HEAD
     if(document.contains(document.getElementById("player-card"))){
         document.getElementById("player-card").remove()
     
@@ -71,9 +57,6 @@ function createPlayerCard(data) {
             console.log(err)
         })
 
-=======
-    // data.preventDefault()
->>>>>>> ff6ec932b51e67adea1496f4f7a9205b30d6311f
     const playerCard = document.createElement('div');
     playerCard.classList.add('player-card');
     playerCard.setAttribute('id','player-card')
@@ -81,7 +64,7 @@ function createPlayerCard(data) {
     <p class="gamer-name">Player Name: ${data.gName}</p>
     <p class="gamer-console">Preferred System: ${data.system}</p>
     <p class="gamer-game">Preferred Game Title: ${data.game}</p>
-    <p class="gamer-reason">Reason for Being A Gamer: ${data.reason}</p>`
+    <p class="gamer-reason">Reason for Gaming: ${data.reason}</p>`
     
 
     playerContainer.appendChild(playerCard);
@@ -89,25 +72,12 @@ console.log('hey')
     gName.value = ''
     system.value = ''
     game.value = ''
-    // reason.value = ''
 };
 
 function clearPlayer() {
     playerContainer.innerHTML = ``
   };
 
-
-// function getPlayer() {
-//     clearPlayer()
-
-//     axios.get(`${baseURL}/players`)
-//     .then(function(res) {
-//       for (let i = 0; i < res.data.length; i++) {
-//         createPlayerCard(res.data[i])
-//       }
-//     })
-//     .catch(err => console.log(err))
-// };
 
 function displayPlayers(arr) {
     playerContainer.innerHTML = ``
@@ -121,14 +91,9 @@ document.addEventListener("DOMContentLoaded", event => {
     audio.volume = 0.04;
   });
 
-<<<<<<< HEAD
+
 createForm.addEventListener('submit', submitHandler);
 
 
 
-=======
-submitBtn.addEventListener('click', submitHandler);
 
-
-// getAllPlayers()
->>>>>>> ff6ec932b51e67adea1496f4f7a9205b30d6311f

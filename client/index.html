@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Connect</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Player Connect</h1>
+    <form id="create-form">
+        <div class="listItem">
+            <input class="info" id="name" placeholder="Gamer Name" />  
+            <input class="info" id="console" placeholder="Favorite Console" />
+            <input class="info" id="game" placeholder="Favorite Game Title" />
+            <label for="reason">Reason for gaming</label>
+            <select id="reason">
+                <option value="">--Please choose an option--</option>
+                <option value="casual-gaming">Casual Gaming</option>
+                <option value="trophy-hunter">To Farm Achievements</option>
+                <option value="sweaty">So I Can Be A Sweat</option>
+                <option value="for-the-bros">I Game For Thy Friends</option>
+                <option value="all-gaming">I Just Love Gaming</option>
+            </select>
+            <button id="button" type="submit">Submit</button>
+        </div> 
+        </form>
+
+        <section id="players-container"></section>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"> </script>
+</body>
+</html>

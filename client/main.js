@@ -37,8 +37,6 @@ console.log(reason)
  };
  console.log(bodyObj)
  createPlayerCard(bodyObj);
-//  let inputs = document.querySelectorAll("input");
-//  inputs.forEach((input) => (input.value = ""));
 gName.value = ''
 system.value = ''
 game.value = ''

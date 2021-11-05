@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Connect</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<audio controls>
-    <source src="Night Flower.mp3" type="audio/mpeg">
-</audio>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Player Connect</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+        <figcaption class="caption">Chuli4n: Night Flower</figcaption>
+    <audio id="aud-position" controls>
+        <source src="Night Flower.mp3" type="audio/mpeg">
+    </audio>
+
 <body>
-     
+    
     <h1>Player Connect</h1>
     <form id="create-form">
-        <div class="listItem">
-            <input class="info" id="name" placeholder="Gamer Name" />  
-            <input class="info" id="console" placeholder="Favorite Console" />
-            <input class="info" id="game" placeholder="Favorite Game Title" />
-
+        <div class="info">
+            <input type="text" class="bg" id="name" placeholder="Gamer Name" />  
+            <input type="text" class="bg" id="console" placeholder="Favorite System" />
+            <input type="text" class="bg" id="game" placeholder="Favorite Game Title" />
             <select id="reason">
-                <option value="">--Reason Gaming--</option>
-                <option value="I'm just your regular Joe.">Casual Gaming</option>
-                <option value="I'm a goal setter.">To Farm Achievements</option>
-                <option value="I like sweat over my defeated foes.">So I Can Be A Sweat</option>
-                <option value="I do it for the squad!">I Game For Thy Friends</option>
-                <option value="Its my passion.">I Just Love Gaming</option>
+                <option class="the-value" value="I'm just your regular Joe.">Casual Gamer</option>
+                <option class="the-value" value="I'm a goal setter.">Achievement Gamer</option>
+                <option class="the-value" value="I like sweat over my defeated foes.">Sweaty Gamer</option>
+                <option class="the-value" value="I do it for the squad!">Friendly Gamer</option>
+                <option class="the-value" value="Its my passion.">Passionate Gamer</option>
             </select>
             <button id="button" type="submit">
                 <div class="pattern">
@@ -33,6 +33,7 @@
                 </div>
                 <div class="text">Submit</div>
               </button>
+              <div class="bg"></div>
         </div> 
         </form>
 
